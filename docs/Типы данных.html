@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Типы данных · Elevator saga practice course</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;В JavaScript существует &lt;strong&gt;6&lt;/strong&gt; типов данных.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Типы данных · Elevator saga practice course"/><meta property="og:type" content="website"/><meta property="og:url" content="https://codyfet.github.io/elevator-saga-practice/"/><meta property="og:description" content="&lt;p&gt;В JavaScript существует &lt;strong&gt;6&lt;/strong&gt; типов данных.&lt;/p&gt;
+"/><meta property="og:image" content="https://codyfet.github.io/elevator-saga-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://codyfet.github.io/elevator-saga-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/elevator-saga-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://codyfet.github.io/elevator-saga-practice/blog/atom.xml" title="Elevator saga practice course Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://codyfet.github.io/elevator-saga-practice/blog/feed.xml" title="Elevator saga practice course Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/elevator-saga-practice/css/main.css"/><script src="/elevator-saga-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/elevator-saga-practice/"><img class="logo" src="/elevator-saga-practice/img/favicon.ico" alt="Elevator saga practice course"/><h2 class="headerTitleWithLogo">Elevator saga practice course</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/elevator-saga-practice/docs/Переменные" target="_self">Docs</a></li><li class=""><a href="/elevator-saga-practice/help" target="_self">Help</a></li><li class=""><a href="/elevator-saga-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Типы данных</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Переменные</h3><ul class=""><li class="navListItem"><a class="navItem" href="/elevator-saga-practice/docs/Переменные">Переменные</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Типы данных</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/elevator-saga-practice/docs/Типы данных">Типы данных</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Типы данных</h1></header><article><div><span><p>В JavaScript существует <strong>6</strong> типов данных.</p>
+<p>Из них 5 является <em>примитивами</em>:</p>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+</ul>
+<p>И 1 является <em>ссылочным</em>:</p>
+<ul>
+<li><code>object</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="примитивы"></a><a href="#примитивы" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Примитивы</h2>
+<h3><a class="anchor" aria-hidden="true" id="строка-string"></a><a href="#строка-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Строка string</h3>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"Мама мыла раму"</span>;
+str = <span class="hljs-string">'Одинарные кавычки тоже подойдут'</span>;
+</code></pre>
+<p>В JavaScript одинарные и двойные кавычки равноправны. Можно использовать или те или другие.</p>
+<h3><a class="anchor" aria-hidden="true" id="число-number"></a><a href="#число-number" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Число number</h3>
+<p>Единый тип <em>число</em> используется как для целых, так и для дробных чисел.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> n = <span class="hljs-number">123</span>;
+n = <span class="hljs-number">12.345</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="булево-значение-boolean"></a><a href="#булево-значение-boolean" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Булево значение boolean</h3>
+<p>У него всего два значения: <code>true</code> (истина) и <code>false</code> (ложь).</p>
+<p>Как правило, такой тип используется для хранения значения типа да/нет.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> checked = <span class="hljs-literal">true</span>;
+checked = <span class="hljs-literal">false</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="специальное-значение-null"></a><a href="#специальное-значение-null" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Специальное значение null</h3>
+<p>Значение <code>null</code> не относится ни к одному из типов выше, а образует свой отдельный тип, состоящий из единственного значения <code>null</code>:</p>
+<pre><code class="hljs"><span class="hljs-keyword">var</span> age = <span class="hljs-literal">null</span>;
+</code></pre>
+<p><code>null</code> - это специальное значение, которое имеет смысл «ничего» или «значение неизвестно».</p>
+<h3><a class="anchor" aria-hidden="true" id="специальное-значение-undefined"></a><a href="#специальное-значение-undefined" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Специальное значение undefined</h3>
+<p>Значение <code>undefined</code>, как и <code>null</code>, образует свой собственный тип, состоящий из одного этого значения. Оно имеет смысл «значение не присвоено».</p>
+<p>Если переменная объявлена, но в неё пока ничего не записано, то её значение как раз и есть <code>undefined</code> (правильнее сказать, что значения у неё вообще нет, оно <em>отсуствует</em>):</p>
+<pre><code class="hljs"><span class="hljs-keywords">var</span> <span class="hljs-symbol">x</span>;
+alert(<span class="hljs-symbol">x</span>); <span class="hljs-comment">// выведет "undefined"</span>
+</code></pre>
+<p>К слову, <em>undefined</em> в переводе с английского дословно означает &quot;не определено&quot;.</p>
+<h2><a class="anchor" aria-hidden="true" id="ссылочные"></a><a href="#ссылочные" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ссылочные</h2>
+<h3><a class="anchor" aria-hidden="true" id="объект-object"></a><a href="#объект-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Объект object</h3>
+<p>Объекты объявляются при помощи фигурных скобок <code>{...}</code>, например:</p>
+<pre><code class="hljs">var<span class="hljs-built_in"> user </span>= {name: <span class="hljs-string">"Вася"</span>};
+</code></pre>
+<p><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
+<p><strong>Объект</strong> - это набор пар вида: <em>ключ</em>: <em>значение</em>.</p>
+<p>Ключ также называют словами: <em>свойство</em>, <em>property</em>, <em>атрибут</em>.</p>
+<p>Обратиться к значению можно так:</p>
+<pre><code class="hljs css language-js">person.lastName
+</code></pre>
+<p>или так:</p>
+<pre><code class="hljs css language-js">person[<span class="hljs-string">"lastName"</span>]
+</code></pre>
+<p>В обоих случаях результатом будет значение &quot;Doe&quot;.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/elevator-saga-practice/docs/Переменные"><span class="arrow-prev">← </span><span>Переменные</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#примитивы">Примитивы</a><ul class="toc-headings"><li><a href="#строка-string">Строка string</a></li><li><a href="#число-number">Число number</a></li><li><a href="#булево-значение-boolean">Булево значение boolean</a></li><li><a href="#специальное-значение-null">Специальное значение null</a></li><li><a href="#специальное-значение-undefined">Специальное значение undefined</a></li></ul></li><li><a href="#ссылочные">Ссылочные</a><ul class="toc-headings"><li><a href="#объект-object">Объект object</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/elevator-saga-practice/" class="nav-home"><img src="/elevator-saga-practice/img/favicon.ico" alt="Elevator saga practice course" width="66" height="58"/></a><div><h5>Docs</h5><a href="/elevator-saga-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/elevator-saga-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/elevator-saga-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/elevator-saga-practice/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/elevator-saga-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/elevator-saga-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
