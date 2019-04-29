@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Elevator saga practice course', // Title for your website.
-  tagline: 'Elevator saga practice course',
+  title: 'Практика в accenture', // Title for your website.
+  tagline: 'Практика в accenture',
   // url: 'https://github.com/codyfet/elevator-saga-practice', // Your website URL
   url: 'https://codyfet.github.io', // Your website URL
   baseUrl: '/elevator-saga-practice/', // Base URL for your project */
@@ -39,10 +39,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'Переменные', label: 'Docs'},
-    // {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'Переменные', label: 'Основы JavaScript'}
   ],
 
   // If you have users set above, you add it here:
@@ -55,7 +52,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#8a3509',
+    // primaryColor: '#8a3509',
+    primaryColor: '#00D700',
     secondaryColor: '#602506',
   },
 
