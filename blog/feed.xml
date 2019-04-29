@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Elevator saga practice course Blog</title>
+        <title>Практика в accenture Blog</title>
         <link>https://codyfet.github.io/elevator-saga-practice/blog</link>
-        <description>The best place to stay up-to-date with the latest Elevator saga practice course news and events.</description>
+        <description>The best place to stay up-to-date with the latest Практика в accenture news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>Elevator saga practice course Blog</title>
+            <title>Практика в accenture Blog</title>
             <url>https://codyfet.github.io/elevator-saga-practice/img/favicon.ico</url>
             <link>https://codyfet.github.io/elevator-saga-practice/blog</link>
         </image>
