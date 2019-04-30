@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Практика в accenture', // Title for your website.
-  tagline: 'Практика в accenture',
+  tagline: 'Твой билет в счастливую жизнь!',
   // url: 'https://github.com/codyfet/acc-practice', // Your website URL
   url: 'https://codyfet.github.io', // Your website URL
   baseUrl: '/acc-practice/', // Base URL for your project */
@@ -39,40 +39,41 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'Переменные', label: 'Основы JavaScript'}
+    {doc: 'Переменные', label: 'Материалы'},
+    {doc: 'Переменные', label: 'Преподаватели'}
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: 'img/Acc_GT_Dimensional_Purple_RGB_REV.svg',
+  footerIcon: 'img/Acc_GT_Dimensional_Purple_RGB_REV.svg',
+  favicon: 'img/acc_favicon.ico',
 
   /* Colors for website */
   colors: {
     // primaryColor: '#8a3509',
     primaryColor: '#00D700',
-    secondaryColor: '#602506',
+    secondaryColor: '#A100FF',
   },
 
   /* Custom fonts for website */
-  /*
-  fonts: {
+    fonts: {
     myFont: [
-      "Times New Roman",
-      "Serif"
+      "Graphik Black",
+      "Arial Black",
+      "Sans-Serif"
     ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
+    // myOtherFont: [
+    //   "-apple-system",
+    //   "system-ui"
+    // ]
   },
-  */
+
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Тверской офис Accenture`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

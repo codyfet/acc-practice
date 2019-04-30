@@ -60,14 +60,26 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+        {/* <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} /> */}
+        {/* <img
+            className="adaptive-img lazy  "
+            data-imagexs="//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png"
+            data-imagesm="//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png"
+            data-imagelg="//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png"
+            alt=""
+            src="//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png"
+            style={{display: "block"}}
+            data-src="//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png">
+          </img> */}
+        {/* <Logo img_src={"//www.accenture.com/t00010101T000000Z__w__/ru-ru/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png"} /> */}
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
+          {/* <PromoSection>
             <Button href="#try">Try It Out</Button>
             <Button href={docUrl('doc1.html')}>Example Link</Button>
             <Button href={docUrl('doc2.html')}>Example Link 2</Button>
-          </PromoSection>
+          </PromoSection> */}
+          <div>13.05.2019 - 13.06.2019</div>
         </div>
       </SplashContainer>
     );
@@ -96,22 +108,33 @@ class Index extends React.Component {
       <div
         className="productShowcaseSection paddingBottom"
         style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+        {/* <h2>Практика включает</h2> */}
+        {/* <MarkdownBlock>Практика включает</MarkdownBlock> */}
       </div>
     );
 
-    const TryOut = () => (
-      <Block id="try">
+    const DemoBlock = () => (
+      <Block  background="light" id="try">
+        {[
+          {
+            content: 'Вы узнаете всё, что хотели знать о компании и о том каково это работать в тверском офисе Accenture',
+            image: `${baseUrl}img/undraw_business_plan_5i9d.svg`,
+            imageAlign: 'left',
+            title: 'Презентация о компании',
+          },
+        ]}
+      </Block>
+    );
+
+    const JavaScriptBlock = () => (
+      <Block>
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
-            imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+              'Вы изучите основы программирования и сможете применить полученные знания для решения задач, представленных в игровой форме.',
+            image: `${baseUrl}img/undraw_programming_2svr.svg`,
+            imageAlign: 'right',
+            title: 'Программирование на языке JavaScript',
           },
         ]}
       </Block>
@@ -122,10 +145,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
+              'Вам предстоит примерить на себя роль аналитика и в игровой форме спроектировать прототип приложения',
+            image: `${baseUrl}img/undraw_business_analytics_l92d.svg`,
             imageAlign: 'right',
-            title: 'Description',
+            title: 'Поучаствуете в бизнес-игре',
           },
         ]}
       </Block>
@@ -136,10 +159,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+              'Вы изучите основы программирования и сможете применить полученные знания для решения задач, представленных в игровой форме.',
+            image: `${baseUrl}img/undraw_programming_2svr.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Программирование на языке JavaScript',
           },
         ]}
       </Block>
@@ -197,12 +220,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
+          {/* <Features /> */}
           <FeatureCallout />
-          <LearnHow />
-          <TryOut />
+          <DemoBlock />
+          <JavaScriptBlock />
           <Description />
-          <Showcase />
+          {/* <Showcase /> */}
         </div>
       </div>
     );
