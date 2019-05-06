@@ -14,3 +14,43 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+/*
+ * Шапка.
+ */
+.fixedHeaderContainer header img {
+    height: 75%;
+}
+
+/*
+ * Главный блок с лого.
+ */
+.homeContainer {
+    background-color: #2b3137;
+    color: white;
+}
+
+.main-block-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-block-wrapper .main-block-text {
+    flex: 2;
+    text-align: left;
+
+}
+
+.main-block-wrapper .main-block-text p {
+    font-size: 64px;
+}
+
+.main-block-wrapper .main-block-logo {
+    flex: 1;
+    margin: auto;
+}
+
+.acc-name {
+    color: #A100FF;
+}
