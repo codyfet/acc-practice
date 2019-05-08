@@ -18,39 +18,145 @@
 /*
  * Шапка.
  */
+.fixedHeaderContainer {
+    display: none;
+}
+
+.sideNavVisible .fixedHeaderContainer {
+    display: block;
+}
+
 .fixedHeaderContainer header img {
     height: 75%;
 }
 
 /*
- * Главный блок с лого.
+ * Подвал
  */
-.homeContainer {
-    background-color: #2b3137;
-    color: white;
+footer {
+    display: none;
 }
 
-.main-block-wrapper {
-    display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
+.sideNavVisible footer {
+    display: block;
 }
 
-.main-block-wrapper .main-block-text {
-    flex: 2;
-    text-align: left;
-
+/**
+ * Подвал.
+ */
+.nav-footer {
+    padding-top: 0;
 }
 
-.main-block-wrapper .main-block-text p {
-    font-size: 64px;
+.nav-footer .sitemap a.nav-home {
+    opacity: 1;
 }
 
-.main-block-wrapper .main-block-logo {
-    flex: 1;
-    margin: auto;
+.copyright {
+    font-size: 12px;
 }
 
-.acc-name {
-    color: #A100FF;
+/*
+ * Основной блок.
+ */
+.home-text {
+    font-family: Arial;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 58px;
+    color: black;
+    text-shadow: 2px 2px 0px rgba(161,0,255,0.5);
+    margin: 4% 30% 0 7%;
+    position: relative;
+    z-index: 100;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, .3);
 }
+
+.logo-acc {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+
+/*
+ * Аксенчер.
+ */
+ .acc-name {
+    color: #f44336;
+}
+
+/*
+ * Ссылка.
+ */
+.link-wrapper {
+    padding-bottom: 5px;
+    border-bottom: 2px solid blue;
+    display: inline-block;
+    font-weight: 600;
+    margin: 4% 0 0 7%;
+}
+
+.link-wrapper .link {
+    color: blue;
+}
+
+.link-wrapper .link:hover {
+    color: #9900F3;
+}
+
+/*
+ * Градиент.
+ */
+body {
+	width: 100wh;
+	height: 90vh;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+body.sideNavVisible  {
+    background: none;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+

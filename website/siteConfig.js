@@ -39,29 +39,28 @@ const siteConfig = {
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
-        { doc: 'Переменные', label: 'Материалы' },
-        { doc: 'Переменные', label: 'Преподаватели' }
+        { doc: 'Переменные', label: 'Материалы' }
     ],
 
     // If you have users set above, you add it here:
     users,
 
     /* path to images for header/footer */
-    headerIcon: 'img/Acc_GT_Dimensional_Purple_RGB_REV.svg',
+    headerIcon: 'img/footer-logo.svg',
     footerIcon: 'img/Acc_GT_Dimensional_Purple_RGB_REV.svg',
     favicon: 'img/acc_favicon.ico',
 
     /* Colors for website */
     colors: {
         // primaryColor: '#8a3509',
-        primaryColor: '#00D700',
+        primaryColor: '#9900F3',
         secondaryColor: '#A100FF',
     },
 
     /* Custom fonts for website */
     fonts: {
         myFont: [
-
+            "https://fonts.googleapis.com/css?family=Roboto"
         ],
         myOtherFont: [
           "-apple-system",
