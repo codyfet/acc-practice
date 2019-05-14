@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
     title: '', // Title for your website.
-    tagline: 'Твой билет в счастливую жизнь!',
+    tagline: 'Практика в Accenture',
     // url: 'https://github.com/codyfet/acc-practice', // Your website URL
     url: 'https://codyfet.github.io', // Your website URL
     baseUrl: '/acc-practice/', // Base URL for your project */
