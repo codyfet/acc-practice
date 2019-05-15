@@ -82,7 +82,8 @@ footer {
     z-index: 10;
     right: 0;
     height: 100vh;
-    top: 0;
+	top: 0;
+	pointer-events: none;
 }
 
 /*
@@ -102,6 +103,7 @@ footer {
     font-weight: 600;
 	margin: 4% 0 0 7%;
 	position: relative;
+	z-index: 2000;
 }
 
 .link-wrapper .link {
