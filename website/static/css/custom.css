@@ -1,6 +1,10 @@
 /* your custom css */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+	div.home-text {
+		margin: 0;
+		font-size: 5vw;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -63,7 +67,7 @@ footer {
     font-family: Arial;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 58px;
+	font-size: 58px;
     color: black;
     text-shadow: 2px 2px 0px rgba(161,0,255,0.5);
     margin: 4% 30% 0 7%;
