@@ -96,7 +96,8 @@ footer {
     border-bottom: 2px solid blue;
     display: inline-block;
     font-weight: 600;
-    margin: 4% 0 0 7%;
+	margin: 4% 0 0 7%;
+	position: relative;
 }
 
 .link-wrapper .link {
